@@ -1,0 +1,50 @@
+---
+layout: default
+title: 我的博客
+---
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>我的博客</title>
+</head>
+
+<body>
+    <nav>
+  
+    <a href="/" >主界面</a>
+  
+    <a href="/about.html" >看看新鲜事</a>
+  
+    <a href="/blog.html" class="current">我的博客</a>
+  
+    <a href="/staff.html" >我的朋友们</a>
+  
+</nav>
+    <h1>发一条动态吧</h1>
+    <h1>我的动态</h1>
+    <ul>
+        {% for message in messages %}
+        <li>
+            {{ message[0] }} {{ message[1] }} 说：{{ message[2] }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <form method="post">
+        <label for="name">主题：</label>
+        <input type="text" name="name" required>
+        <br>
+        <label for="message">内容：</label>
+        <input type="text" name="message" required>
+        <br>
+        <button type="submit">提交</button>
+    </form>
+<img src="images/2.jpg" alt="嘿嘿嘿" width="300" height="300">
+<ul>
+    
+</ul>
+</body>
+
+</html>
